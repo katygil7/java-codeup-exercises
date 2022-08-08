@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//import java.lang;
 public class MethodsExercises {
 
     public static void main(String[] args) {
@@ -47,7 +47,7 @@ public class MethodsExercises {
     }
 
     public static int getInteger(int min, int max){
-        int track  = 0;
+        int tracking = 0;
         do {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter a number between 1 and 10: ");
@@ -56,12 +56,24 @@ public class MethodsExercises {
             if (userInputNum >= min && userInputNum <= max) {
                 System.out.println("Number is within range");
                 System.out.println(userInputNum);
-                track = 1;
+                tracking = 1;
             } else {
                 System.out.println("Number not in range");
             }
-        } while (track == 0);
-        return track;
+        } while (tracking == 0);
+        return tracking;
     }
+//    public static int roll(int x, int y){
+////        Random random =  new Random(y);
+//        if (x =< 0){
+//            x = 1;
+//        }
+//    }else {
+//        for (int i = 1; i <= x; i++){
+////            System.out.println("roll #" + i + "is" + Math.round(Math.random()) * y);
+//        }
+//    }
+
+
 
 }
