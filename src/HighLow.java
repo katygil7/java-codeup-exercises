@@ -6,6 +6,7 @@ public class HighLow {
         int startFrom = 0;
         do {
             Scanner sc = new Scanner(System.in);
+            System.out.println("Type a number between 1-10");
             int userNumber = sc.nextInt();
             System.out.println("Only have" + (5-(startFrom)) + "guesses left");
             if (userNumber > RandomNumber){
@@ -21,4 +22,4 @@ public class HighLow {
         while (startFrom < 10);
     }
 }
-
+// My loop is not working
