@@ -13,7 +13,7 @@ public String getString(){
     return scanner.nextLine();
     }
 public boolean yesNo (){
-    String userInput = this.scanner.nextLine();
+    String userInput = getString();
     if ( userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")){
         return  true;
     }else{
@@ -22,7 +22,7 @@ public boolean yesNo (){
 }
     public int getInt(int min, int max){
         System.out.println("pick a number between" + " " + min + " " + "and" + " "+ max);
-        int userNum = this.scanner.nextInt();
+        int userNum = getInt();
         if (userNum < min || userNum > max){
             System.out.format("ops %s is not between the range" + " ", userNum);
             return getInt(min,max);
