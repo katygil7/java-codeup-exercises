@@ -6,7 +6,7 @@ public class Input {
     private Scanner scanner;
 
     public Input (){
-        System.out.println("Type something");
+//        System.out.println("Type something");
         this.scanner = new Scanner(System.in);
     }
 public String getString(){
@@ -50,10 +50,11 @@ public boolean yesNo (){
         }
     }
     public double getDouble(){
-        System.out.println("type PI value");
+//        System.out.println("type PI value");
         double theirDecimal = this.scanner.nextDouble();
         return theirDecimal;
     }
+
 
 
 
