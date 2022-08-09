@@ -6,6 +6,7 @@ public class Input {
     private Scanner scanner;
 
     public Input (){
+        System.out.println("Type something");
         this.scanner = new Scanner(System.in);
     }
 public String getString(){
@@ -20,23 +21,40 @@ public boolean yesNo (){
     }
 }
     public int getInt(int min, int max){
-        System.out.println("pick a number between" + min + "and" + max);
+        System.out.println("pick a number between" + " " + min + " " + "and" + " "+ max);
         int userNum = this.scanner.nextInt();
         if (userNum < min || userNum > max){
-            System.out.println("ops pick another number");
+            System.out.format("ops %s is not between the range" + " ", userNum);
             return getInt(min,max);
         }else{
             System.out.println(" great, you won");
             return userNum;
         }
     }
-
-    public static void main(String[] args) {
-
-        Input input = new Input();
-        System.out.println(input.getString());
-        System.out.println("Do you like pizza?");
-        System.out.println(input.yesNo());
-        System.out.println(input.getInt(1,10));
+    public int getInt(){
+        System.out.println("What is your favorite number");
+        int favNum = this.scanner.nextInt();
+        System.out.println("Great number");
+        return favNum;
     }
+//how to return nothing
+    public double getDouble(double min, double max){
+        System.out.println("type a decimal number between" + " " + min + " " + "and" + " " + max);
+        double theirGuess = this.scanner.nextDouble();
+        if( theirGuess < min || theirGuess > max){
+            System.out.println("Decimal out of range");
+            return getDouble(min, max);
+        }else{
+            System.out.println("awesome decimal");
+            return theirGuess;
+        }
+    }
+    public double getDouble(){
+        System.out.println("type PI value");
+        double theirDecimal = this.scanner.nextDouble();
+        return theirDecimal;
+    }
+
+
+
 }
