@@ -20,7 +20,7 @@ public boolean yesNo (){
         return false;
     }
 }
-    public int getInt(int min, int max){
+    public static int getInt(int min, int max){
         System.out.println("pick a number between" + " " + min + " " + "and" + " "+ max);
         int userNum = getInt();
         if (userNum < min || userNum > max){
