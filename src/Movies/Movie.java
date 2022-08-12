@@ -9,8 +9,12 @@ public class Movie {
         this.category = category;
     }
 
+    @Override
+    public String toString() {
+        return name + "--" + category;
+    }
 
-    //to access properties (accessors)
+//to access properties (accessors)
 
     public String getName() {
         return name;

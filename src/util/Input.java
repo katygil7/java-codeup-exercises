@@ -20,7 +20,10 @@ public boolean yesNo (){
         return false;
     }
 }
-    public static int getInt(int min, int max){
+    public int getInt(){
+        return scanner.nextInt();
+    }
+    public int getInt(int min, int max){
         System.out.println("pick a number between" + " " + min + " " + "and" + " "+ max);
         int userNum = getInt();
         if (userNum < min || userNum > max){
@@ -31,12 +34,13 @@ public boolean yesNo (){
             return userNum;
         }
     }
-    public int getInt(){
-        System.out.println("What is your favorite number");
-        int favNum = this.scanner.nextInt();
-        System.out.println("Great number");
-        return favNum;
-    }
+
+//    public int getInt(){
+//        System.out.println("What is your favorite number");
+//        int favNum = this.scanner.nextInt();
+//        System.out.println("Great number");
+//        return favNum;
+//    }
 //how to return nothing
     public double getDouble(double min, double max){
         System.out.println("type a decimal number between" + " " + min + " " + "and" + " " + max);

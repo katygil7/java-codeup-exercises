@@ -56,7 +56,7 @@ public class MoviesApplication {
         while (choice != EXIT_CHOICE){
             printMenu();
 
-            choice = Input.getInt(0,5);
+            choice = input.getInt(0,5);
             doChoice(choice);
         }
     }
