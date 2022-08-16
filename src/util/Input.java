@@ -10,6 +10,7 @@ public class Input {
         this.scanner = new Scanner(System.in);
     }
 public String getString(){
+    System.out.println("enter something:");
     return scanner.nextLine();
     }
 public boolean yesNo (){
@@ -21,7 +22,13 @@ public boolean yesNo (){
     }
 }
     public int getInt(){
-        return scanner.nextInt();
+        while(true){
+            try{
+                return Integer.parseInt(getString());
+            } catch (NumberFormatException e){
+                System.out.println("Wrong-o!");
+            }
+        }
     }
     public int getInt(int min, int max){
         System.out.println("pick a number between" + " " + min + " " + "and" + " "+ max);
